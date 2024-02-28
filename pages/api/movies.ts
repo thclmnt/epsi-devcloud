@@ -2,6 +2,24 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { sendOk } from '../../lib/responseUtils';
 import { getAllMovies, createMovie } from '../../lib/movieUtils';
 
+/**
+ * @swagger
+ * /api/movies:
+ *   get:
+ *     tags:
+ *      - Movies
+ *     description: Returns all movies
+ *     responses:
+ *       200:
+ *         description: All movies returned successfully
+ *   post:
+ *     tags:
+ *      - Movies
+ *     description: Create a new movie
+ *     responses:
+ *       200:
+ *         description: Movie created successfully
+ */
 export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse
