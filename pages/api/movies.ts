@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { sendOk } from '../../lib/responseUtils';
 import { getAllMovies, createMovie } from '../../lib/movieUtils';
+import { NextResponse } from 'next/server';
 
 /**
  * @swagger
@@ -23,7 +24,7 @@ import { getAllMovies, createMovie } from '../../lib/movieUtils';
 export default async function handler(
 	req: NextApiRequest,
 	res: NextApiResponse
-) {
+): Promise<NextResponse> {
 	switch (req.method) {
 		case 'POST':
 			const data = req.body;
@@ -37,4 +38,5 @@ export default async function handler(
 		default:
 			break;
 	}
+	return NextResponse.next();
 }
