@@ -41,9 +41,13 @@ npm run test
 ## Stack technique utilisé
 
 Node est requis pour utiliser ce projet.
+
 Le projet utilise le framework Next.js dans sa dernière version.
+
 Pour le stockage des données, il utilise MongoDB, une base de données NoSQL.
+
 Afin de permettre à l'utilisateur d'explorer l'API, un Swagger est également mis en place.
+
 Enfin, pour les tests unitaires, le projet utilise le framework Jest.
 
 ## Swagger
