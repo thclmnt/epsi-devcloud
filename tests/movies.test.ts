@@ -2,8 +2,8 @@ import { createMocks } from 'node-mocks-http';
 import handler from '../pages/api/movies';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-describe('/api/users', () => {
-	test('returns a list of users', async () => {
+describe('/api/movies', () => {
+	test('returns a list of movies', async () => {
 		const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
 			method: 'GET',
 		});
